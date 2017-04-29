@@ -1,5 +1,10 @@
 Hello
 
-<%=@books.each do |book|%>
-<%=book.title%><%=book.author%><%=book.already_read%>
+<%@books.each do |book|%>
+
+Title: <%=book.title%>
+Author: <%=book.author%>
+Already read?: <%=book.already_read%>
+
+
 <%end%>
