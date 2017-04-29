@@ -7,6 +7,7 @@ class BooksController < ApplicationController
       format.html
       format.text
       format.csv
+      format.json {render :json => @books.to_json}
     end
   end
 
