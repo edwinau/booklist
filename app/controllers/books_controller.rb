@@ -2,18 +2,22 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def show
-    @books = Book.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def new
-    @books = Book.new
+    @book = Book.new
   end
 
   def edit
-    @books = Book.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def create
@@ -24,5 +28,5 @@ class BooksController < ApplicationController
         render :new
       end
     end
-    
+
 end
