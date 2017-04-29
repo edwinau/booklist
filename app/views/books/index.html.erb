@@ -1,5 +1,10 @@
 <h1> Hello </h1>
 
-<%=@books.each do |book|%>
-<%=book.title%><%=book.author%><%=book.already_read%>
+<%@books.each do |book|%>
+<hr>
+<p>Title: <%=book.title%></p>
+<p>Author: <%=book.author%></p>
+<p>Already read?: <%=book.already_read%></pr>
+<br>
+<br>
 <%end%>
